@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { observer, inject } from 'mobx-react';
 import Input from "../../components/DataEntry/Input";
 import { InputID } from '../../constants/ID';
-import { FormattedMessage } from 'react-intl';
 
 const Container = styled.header`
 `;
@@ -77,7 +76,7 @@ class SignUp extends React.Component {
                     <SubmitButton 
                         onClick={this.onSubmit}
                     >
-                        <FormattedMessage id="Sign Up"/>
+                       Sign up
                     </SubmitButton>
                 </Form>
             </Container>

@@ -7,10 +7,6 @@ import { inject } from 'mobx-react';
 import * as routes from '../constants/routes';
 import * as pages from './PageExporter';
 import { firebaseApp } from '../module/firebase';
-import Slider from '../components/Feedback/Slider';
-import HamburgerMenu from '../components/Button/HamburgerMenu';
-import NavigationMenu from '../components/Navigation/NavigationMenu';
-import { UserType } from '../constants/ID';
 import { GlobalStyle } from '../constants/globalStyles';
 import { getIdToken } from '../utils/utils';
 
@@ -98,18 +94,7 @@ class App extends React.Component {
         slider.close();
     }
 
-    renderAdminRoutes() {
-        return (
-            <div>
-                <Route exact path={routes.ADMIN.route}         component={pages.Admin}/>
-                <Route exact path={routes.ADMIN_PRODUCT.route} component={pages.AdminProduct}/>  
-            </div>          
-        )
-    }
-
     render() {
-        const { isMobileSize, user } = this.props;
-
         return (
             <RootContainer>
                 <GlobalStyle/>
@@ -122,12 +107,6 @@ class App extends React.Component {
                     <Route exact path={routes.SIGN_IN.route} component={pages.SignIn}/>
                     <Route exact path={routes.SIGN_UP.route} component={pages.SignUp}/>
                     <Route exact path={routes.ACCOUNT.route} component={pages.Account}/>
-                    <Route exact path={routes.SHOP.route}    component={pages.Shop}/>
-                    <Route exact path={routes.BLOG.route}    component={pages.Blog}/>
-                    <Route exact path={routes.POSTING.route} component={pages.Posting}/>
-                    <Route exact path={routes.DETAIL.route}  component={pages.Detail}/>
-                    <Route exact path={routes.CART.route}    component={pages.Cart}/>
-                    {user && user.role === UserType.admin && this.renderAdminRoutes()}
                 </Contents>
 
                 <Footer/>

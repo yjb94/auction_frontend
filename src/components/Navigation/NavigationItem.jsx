@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { observer, inject } from 'mobx-react';
 import { DEFAULT_ROUTE } from '../../constants/routes';
 import { withRouter } from "react-router-dom";
-import { injectIntl } from 'react-intl';
 import { config } from '../../constants/general';
 
 const Conatiner = styled.button`
@@ -53,4 +52,4 @@ NavigationItem.defaultProps = {
     active: false
 };
 
-export default injectIntl(withRouter(NavigationItem));
+export default withRouter(NavigationItem);

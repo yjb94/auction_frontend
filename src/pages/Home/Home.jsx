@@ -13,7 +13,7 @@ export default class Home extends React.Component {
     render() {
         return (
             <Container>
-                나는 박은송. 반갑다.
+                Hello
             </Container>
         );
     }

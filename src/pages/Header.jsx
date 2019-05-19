@@ -4,8 +4,7 @@ import { observer, inject } from 'mobx-react';
 import NavigationMenu from '../components/Navigation/NavigationMenu';
 import NavigationItem from '../components/Navigation/NavigationItem';
 import TabButton from '../components/Button/TabButton';
-import { SIGN_IN, HOME, ACCOUNT, SHOP, BLOG } from '../constants/routes';
-import { FormattedMessage } from 'react-intl';
+import { SIGN_IN, HOME, ACCOUNT } from '../constants/routes';
 import zIndex from '../constants/zIndex';
 import Logo from '../assets/img/logo';
 import { withRouter } from "react-router-dom";
@@ -90,7 +89,7 @@ class Header extends React.Component {
         if(user) {
             return (
                 <LogoutButton onClick={this.handleLogout}>
-                    <FormattedMessage id="Logout"/>
+                    로그아웃
                 </LogoutButton>
             )
         } else {
@@ -128,7 +127,7 @@ class Header extends React.Component {
             <Container id="header">
                 <MainHeader>
                     <LeftContainer>
-                        <NavigationMenu routes={[SHOP, HOME]}/>
+                        {/* <NavigationMenu routes={[SHOP, HOME]}/> */}
                     </LeftContainer>
                     <MiddleContainer>
                         <NavigationItem data={HOME} custom={true}>
@@ -136,7 +135,7 @@ class Header extends React.Component {
                         </NavigationItem>
                     </MiddleContainer>
                     <RightContainer>
-                        <NavigationMenu routes={[BLOG, ACCOUNT]}/>
+                        {/* <NavigationMenu routes={[BLOG, ACCOUNT]}/> */}
                     </RightContainer>
                 </MainHeader>
 

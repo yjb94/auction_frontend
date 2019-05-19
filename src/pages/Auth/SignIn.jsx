@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { observer, inject } from 'mobx-react';
 import Input from '../../components/DataEntry/Input';
 import { InputID } from '../../constants/ID';
-import { injectIntl, FormattedMessage } from 'react-intl';
 import StateButton, { ButtonState } from '../../components/Button/StateButton';
 
 const Container = styled.div`
@@ -84,7 +83,7 @@ class SignIn extends React.Component {
                         label={intl.formatMessage({ id: 'Password' })}
                     />
                     <StateButton onClick={this.onSubmit} buttonState={auth.isFetching ? ButtonState.loading : ButtonState.idle}>
-                        <FormattedMessage id="Sign In"/>
+                        Sign In
                     </StateButton>
                 </Form>
                 <ForgotPassword/>
@@ -96,4 +95,4 @@ class SignIn extends React.Component {
 SignIn.defaultProps = {
 };
 
-export default injectIntl(SignIn);
+export default SignIn;

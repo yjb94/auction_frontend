@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from "styled-components";
-import { FormattedMessage } from 'react-intl';
-import LocaleItem from '../components/Global/LocaleItem';
 import { config } from '../constants/general';
 import { inject } from 'mobx-react';
 
@@ -71,11 +69,6 @@ class Footer extends React.Component {
                 <div onClick={this.handleLogout}>
                     logout
                 </div>
-                {/* <LanguageContainer>
-                    <FormattedMessage id="Set Language"/>
-                    <LocaleItem langId="Korean" localeTo="ko"/>
-                    <LocaleItem langId="English" localeTo="en"/>
-                </LanguageContainer> */}
             </Container>
         );
     }

@@ -107,6 +107,7 @@ class App extends React.Component {
                     <Route exact path={routes.SIGN_IN.route} component={pages.SignIn}/>
                     <Route exact path={routes.SIGN_UP.route} component={pages.SignUp}/>
                     <Route exact path={routes.ACCOUNT.route} component={pages.Account}/>
+                    <Route exact path={routes.AUCTION_LIST.route} component={pages.AuctionList}/>
                 </Contents>
 
                 <Footer/>

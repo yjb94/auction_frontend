@@ -26,9 +26,9 @@ class NavigationItem extends React.Component {
     }
 
     render() {
-        const { data, custom, children, intl } = this.props;
+        const { data, custom, children } = this.props;
 
-        const name =  data.id ? intl.formatMessage({ id: data.id }) : data.name;
+        const name =  data.id ? 'wtf' : data.name;
 
         return (
             <Conatiner 

@@ -15,7 +15,7 @@ const Container = styled.header`
     left: 0;
     right: 0;
     background-color:white;
-    position: sticky;
+    position: absolute;
     z-index:${zIndex.Header};
 `;
 const MainHeader = styled.div`
@@ -32,6 +32,7 @@ const LeftContainer = styled.div`
 
     flex: 1;
 `;
+
 const MiddleContainer = styled.div`
     display:flex;
     align-items:center;
@@ -39,10 +40,14 @@ const MiddleContainer = styled.div`
 
     font-size: 40px;
 `;
-const LogoOnthehouse = styled.img`
-    width: 177px;
-    height:36.71px;
-`;
+const LogoOnthehouse = styled.div`
+    font-family:'Sloop Script';
+    font-size:30px;
+    color:${config.color.capeCod};
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+`
 const RightContainer = styled.div`
     display:flex;
     align-items:center;
@@ -131,7 +136,9 @@ class Header extends React.Component {
                     </LeftContainer>
                     <MiddleContainer>
                         <NavigationItem data={HOME} custom={true}>
-                            <LogoOnthehouse src={Logo.onthehouse}/>
+                            <LogoOnthehouse>
+                                Galleria
+                            </LogoOnthehouse>
                         </NavigationItem>
                     </MiddleContainer>
                     <RightContainer>

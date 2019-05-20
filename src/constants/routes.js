@@ -7,3 +7,5 @@ export const SIGN_UP = { route:'/signup', id: 'Sign Up' };
 export const SIGN_IN = { route:'/signin', id:'Sign In' };
 export const ACCOUNT = { route:'/account', name:'ACCOUNT' };
 export const PASSWORD_FORGET = { route:'/forgot', name:'Password Forget' };
+
+export const AUCTION_LIST = { route:'/auctionList', name:'Auction List' };

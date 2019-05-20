@@ -62,7 +62,7 @@ class SignIn extends React.Component {
             return true;
     }
     render() {
-        const { intl, auth } = this.props;
+        const { auth } = this.props;
         const { email, password } =  this.state;
 
         return (
@@ -73,14 +73,14 @@ class SignIn extends React.Component {
                         value={email} 
                         onChange={this.onInputChange}
                         type={'email'}
-                        label={intl.formatMessage({ id: 'Email' })}
+                        label={'email'}
                     />
                     <Input 
                         id={InputID.password} 
                         value={password} 
                         onChange={this.onInputChange}
                         type={'password'}
-                        label={intl.formatMessage({ id: 'Password' })}
+                        label={'password'}
                     />
                     <StateButton onClick={this.onSubmit} buttonState={auth.isFetching ? ButtonState.loading : ButtonState.idle}>
                         Sign In

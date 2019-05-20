@@ -33,8 +33,6 @@ const Line = styled.div`
     width:80%;
     background-color:#F7703C;
 `;
-const LanguageContainer = styled.div`
-`;
 const Contacts = styled.div`
     font-size:1em;
     margin-bottom:40px;
@@ -57,14 +55,14 @@ class Footer extends React.Component {
         return (
             <Container>
                 <LogoOnthehouse>
-                    On the House
+                    Galleria
                     <Line/>
                 </LogoOnthehouse>
                 <Contacts>
                     onthehouse_@naver.com
                 </Contacts>
                 <Copyright>
-                    Copyright© on the house, all rights reserved
+                    Copyright© YJB, all rights reserved
                 </Copyright>
                 <div onClick={this.handleLogout}>
                     logout

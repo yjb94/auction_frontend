@@ -59,7 +59,7 @@ class Footer extends React.Component {
                     <Line/>
                 </LogoOnthehouse>
                 <Contacts>
-                    onthehouse_@naver.com
+                    jaybe@stayge.net
                 </Contacts>
                 <Copyright>
                     Copyright© YJB, all rights reserved

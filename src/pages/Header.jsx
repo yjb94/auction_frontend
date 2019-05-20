@@ -6,7 +6,6 @@ import NavigationItem from '../components/Navigation/NavigationItem';
 import TabButton from '../components/Button/TabButton';
 import { SIGN_IN, HOME, ACCOUNT } from '../constants/routes';
 import zIndex from '../constants/zIndex';
-import Logo from '../assets/img/logo';
 import { withRouter } from "react-router-dom";
 import { config } from '../constants/general';
 
@@ -15,7 +14,7 @@ const Container = styled.header`
     left: 0;
     right: 0;
     background-color:white;
-    position: absolute;
+    position: sticky;
     z-index:${zIndex.Header};
 `;
 const MainHeader = styled.div`
